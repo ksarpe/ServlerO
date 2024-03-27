@@ -13,4 +13,13 @@
         <url-pattern>/shoppingList</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>DeleteProduct</servlet-name>
+        <servlet-class>product.DeleteProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteProduct</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
 </web-app>

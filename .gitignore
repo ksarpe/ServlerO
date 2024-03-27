@@ -1,0 +1,24 @@
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# NetBeans project files
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbactions.xml
+nb-configuration.xml
+
+# Maven project files
+target/
+
+# IDE-specific files
+.idea/
+.vscode/
+nbproject
+/build

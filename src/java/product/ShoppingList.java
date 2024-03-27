@@ -22,6 +22,6 @@ public class ShoppingList extends HttpServlet {
         
         session.setAttribute("shoppingList", shoppingList);
         
-        response.sendRedirect("shopping-list.jsp");
+        response.sendRedirect("index.jsp");
     }
 }

@@ -1,39 +1,123 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
 }
 
-h2 {
-    color: #333;
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-form {
-    margin-bottom: 20px;
+header {
+    background: #50a3a2;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: 1px solid #ffffff;
 }
 
-label {
-    margin-right: 10px;
-}
-
-input[type="text"],
-input[type="number"] {
-    margin-bottom: 10px;
-    margin-right: 10px;
-}
-
-button {
-    cursor: pointer;
+header h1 {
+    padding: 5px 0;
 }
 
 table {
-    width: 100%;
+    width: 60%;
+    margin: 20px auto;
     border-collapse: collapse;
 }
 
 th, td {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 16px;
 }
 
 th {
+    background-color: #50a3a2;
+    color: #fff;
+}
+
+tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
+a {
+    color: #50a3a2;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #50a3a2;
+    color: white;
+    padding: 5px 20px;
+    margin: 0px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #469890;
+}
+
+.marked {
+    text-decoration: line-through;
+    color: grey;
+    background-color: #f0f0f0;
+    opacity: 0.7;
+}
+
+.delete-btn, .mark-btn {
+    border: none;
+    cursor: pointer;
+    padding: 5px 8px;
+    font-weight: bold;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 8px;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background-color: #ff3333;
+}
+
+.mark-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 8px;
+    font-weight: bold;
+}
+
+.mark-btn:hover {
+    background-color: #45a049;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    text-align: left;
+}
+
+
