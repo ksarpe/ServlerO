@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -13,12 +13,27 @@ body {
 }
 
 header {
-    background: #50a3a2;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
     color: #fff;
     padding-top: 30px;
     min-height: 70px;
     border-bottom: 1px solid #ffffff;
 }
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Creates space between items */
+}
+
+/* The rest of your CSS remains unchanged */
+
 
 header h1 {
     padding: 5px 0;
@@ -30,7 +45,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: left;
@@ -38,7 +54,7 @@ th, td {
 }
 
 th {
-    background-color: #50a3a2;
+    background-color: #00c6ff;
     color: #fff;
 }
 
@@ -47,7 +63,7 @@ tr:nth-child(even) {
 }
 
 a {
-    color: #50a3a2;
+    color: #00c6ff;
     text-decoration: none;
     font-size: 18px;
 }
@@ -57,17 +73,18 @@ a:hover {
 }
 
 button {
-    background-color: #50a3a2;
+    background-color: #00c6ff;
     color: white;
     padding: 5px 20px;
     margin: 0px 0;
     border: none;
     cursor: pointer;
     font-size: 18px;
+    border-radius: 4px;
 }
 
 button:hover {
-    background-color: #469890;
+    background-color: #0072ff;
 }
 
 .marked {
@@ -77,7 +94,8 @@ button:hover {
     opacity: 0.7;
 }
 
-.delete-btn, .mark-btn {
+.delete-btn,
+.mark-btn {
     border: none;
     cursor: pointer;
     padding: 5px 8px;
@@ -93,6 +111,7 @@ button:hover {
     cursor: pointer;
     padding: 5px 8px;
     font-weight: bold;
+    border-radius: 4px;
 }
 
 .delete-btn:hover {
@@ -100,12 +119,13 @@ button:hover {
 }
 
 .mark-btn {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
     border: none;
     cursor: pointer;
     padding: 5px 8px;
     font-weight: bold;
+    border-radius: 4px;
 }
 
 .mark-btn:hover {
@@ -119,5 +139,3 @@ td {
 th {
     text-align: left;
 }
-
-

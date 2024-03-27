@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="jakarta.servlet.http.HttpSession" %>
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" DO NAPRAWY %>--%> 
 <%@ page import="java.util.List" %>
 <html>
 <head>
@@ -6,12 +8,25 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
-<header>
-    <div class="container">
-        <h1>Pomocnik Zakupowy</h1>
-    </div>
-</header>
+    <header>
+        <div class="container header-content">
+            <h1>Pomocnik Zakupowy</h1>
+            <div class="user-controls">
+                <c:choose>
+                    <c:when test="${not empty sessionScope.currentUser}">
+                        <p>Welcome, ${sessionScope.currentUser.username}!</p>
+                        <form action="${pageContext.request.contextPath}/logout" method="get">
+                            <button type="submit">Logout</button>
+                        </form>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="${pageContext.request.contextPath}/login.jsp">Login</a>
+                    </c:otherwise>
+                </c:choose>
+            </div>
+        </div>
+    </header>
+    
 
 <div class="container">
     <h2>Dodaj nowy produkt</h2>
