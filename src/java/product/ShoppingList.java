@@ -1,10 +1,10 @@
 package product;
 
+import database.User;
+import database.Product;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ShoppingList extends HttpServlet {
     @SuppressWarnings("unchecked")
@@ -12,15 +12,16 @@ public class ShoppingList extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         
-        List<String> shoppingList = (List<String>) session.getAttribute("shoppingList");
-        if (shoppingList == null) {
-            shoppingList = new ArrayList<>();
-        }
+        User currentUser = (User) session.getAttribute("currentUser");
+                
+        String productName = request.getParameter("productName");
+        String productQuantity = request.getParameter("productQuantity");
         
-        String product = request.getParameter("productName") + " - Quantity: " + request.getParameter("productQuantity");
-        shoppingList.add(product);
+        Product product = new Product(productName, productQuantity);
+        currentUser.addProduct(product);
         
-        session.setAttribute("shoppingList", shoppingList);
+        // Optionally, save changes to session or database here if needed
+        session.setAttribute("currentUser", currentUser); // Update the session
         
         response.sendRedirect("index.jsp");
     }

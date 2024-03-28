@@ -27,9 +27,14 @@ header {
 }
 
 .user-controls {
-    display: flex;
     align-items: center;
-    gap: 10px; /* Creates space between items */
+    justify-content: center;
+    gap: 22px; /* Creates space between items */
+}
+
+.welcome{
+    font-size:1.5rem;
+    margin-bottom: 4px;
 }
 
 /* The rest of your CSS remains unchanged */

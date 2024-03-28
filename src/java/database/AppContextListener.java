@@ -10,9 +10,7 @@ public class AppContextListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         // Tu tworzysz i dodajesz domyślnego użytkownika
-        User defaultUser = new User();
-        defaultUser.setUsername("test");
-        defaultUser.setPassword("test"); // W prawdziwej aplikacji hasła powinny być hashowane
+        User defaultUser = new User("ola", "oli");
 
         // Dodanie użytkownika do uproszczonej bazy danych
         UserDatabase.addUser(defaultUser);

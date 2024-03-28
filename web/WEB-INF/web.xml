@@ -39,6 +39,14 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>MarkProductServlet</servlet-name>
+        <servlet-class>product.MarkProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MarkProductServlet</servlet-name>
+        <url-pattern>/MarkProductServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>
 

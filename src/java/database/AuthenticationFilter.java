@@ -29,7 +29,6 @@ public class AuthenticationFilter implements Filter {
         if (isLoggedIn || isLoginRequest || isLoginServletRequest || isStaticResource) { // Modify this line
             chain.doFilter(request, response);
         } else {
-            System.out.println("Redirecting to login page. isLoggedIn: " + isLoggedIn + ", isLoginRequest: " + isLoginRequest + ", isStaticResource: " + isStaticResource);
             response.sendRedirect(loginURI);
         }
     }

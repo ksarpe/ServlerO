@@ -1,28 +1,36 @@
 package database;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 public class User {
   private String username;
   private String password; // W praktyce hasła powinny być haszowane
-  private HashMap<String, Boolean> products = new HashMap<>();
-  // Gettery i settery
+  private List<Product> shoppingList = new ArrayList<>();
+  
+  public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+        this.shoppingList = new ArrayList<>(); //
+    }
+
   public String getUsername() {
     return username;
-  }
-  public void setUsername(String username) {
-    this.username = username;
   }
   public String getPassword() {
     return password;
   }
-  public void setPassword(String password) {
-    this.password = password;
-  }
-  public HashMap<String, Boolean> getProducts() {
-    return products;
-  }
-  public void setProducts(HashMap<String, Boolean> products) {
-    this.products = products;
-  }
+
+  public List<Product> getShoppingList() {
+        return shoppingList;
+    }
+
+    // Add a method to add a product to the list
+    public void addProduct(Product product) {
+        this.shoppingList.add(product);
+        System.out.println("Product added to the list");
+        for (Product p : shoppingList) {
+            System.out.print(p.getName());
+        }
+    }
 }
